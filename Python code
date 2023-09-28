@@ -153,3 +153,75 @@
  #       row = 3 6 9 12
 #column = 4
  #       row = 4 8 12 16
+
+
+
+def student_grade(name, grade):
+	return "{} received {}% on the exam.".format(name,grade)
+print(student_grade("Reed", 80))
+
+
+
+price = 7.5
+with_tax = price *1.09 #tax rate of 9%
+print("The price without tax is " + str(price) + " The price with tax is " + str(with_tax))
+
+
+
+price = 7.5
+with_tax = price *1.09 #tax rate of 9%
+print("Base price: ${:.2f}. With Tax: ${:.2f}".format(price)
+
+def to_celcius(x):
+  return(x-32)*5/9
+  for x in range (0, 101, 10):
+    print("{:>3} F | {:>6.2f} C". format(x, to_celsius(x)))
+
+
+def mirrored_string(my_string):
+  forwards = ""
+  backwards = ""
+  for character in my_string:
+    if character.isalpha():
+      forwards += character
+      backwards = character + backwards
+    if forwards.lower() == backwards.lower():
+      return True
+    return false
+
+  print(mirrored_string("12 Noon"))
+  print(mirrored_string("Was it a car or a cat that I saw"))
+
+
+
+
+def convert_weight(ounces):
+  pounds = ounces/16
+  result = "{} ounces equals {:.2f} pounds".format(ounces, pounds)
+  return result
+
+print(convert_weight(12))
+
+
+
+
+
+def username(last_name,birth_year):
+  return("{}{}".format(last_name[0:4],birth_year))
+print(username("Danforth","1995"))
+print(username("Yildirim","1999"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
