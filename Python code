@@ -1,3 +1,320 @@
+class Flower:
+  color = 'unknown'
+
+rose = Flower()
+rose.color = "red"
+
+violet = Flower()
+violet.color = "blue"
+
+this_pun_is_for_you = "Sugar is sweet, and so are you"
+
+print("Roses are {},".format(rose.color))
+print("violets are {},".format(violet.color))
+print(this_pun_is_for_you)
+
+
+
+
+
+
+
+
+
+def endangered_animals(animal_dict):
+    result = ""
+    # Complete the for loop to iterate through the key and value items
+    # in the dictionary.
+    for animal in animal_dict:
+        # Use a string method to format the required string.
+        result += animal + "\n"
+    return result
+
+print((endangered_animals({"Javan Rhinoceros":60, "Vaquita":10, "Mountain Gorilla":200, "Tiger":500})))
+
+
+
+#We have two pieces of furniture. a brown wood table and a red leather couch
+#Fill in blanks so that the describe_furniture function
+#can format a sentence as follows "This piece of furniture is made of x and z"
+
+class Furniture:
+	color = ""
+	material = ""
+
+table = Furniture()
+
+___
+
+couch = Furniture()
+___
+___
+
+def describe_furniture(piece):
+	return ("This piece of furniture is made of {} {}".format(piece.color, piece.material))
+
+
+
+
+#Let's make the method do something different depending on the ATTRIBUTE of an INSTANCE
+class Piglet:
+  name = "name"  #This line is similar to initializing?
+  def speak(self):
+    print("Oink! I'm {}! Oink!".format(self.name))
+    #self.name format means it is accessing attribute of the name from line 2 of code
+hamlet = Piglet()
+hamlet.name = "Hamlet"
+hamlet.speak()
+
+petunia = Piglet()
+petunia.name = "Petunia"
+petunia.speak()
+
+
+
+class Piglet:
+  years = 0
+  def pig_years(self):
+    return self.years * 18
+#Let's create an instance to use this function
+piggy = Piglet()
+print(piggy.pig_years())
+
+piggy.years = 2
+print(piggy.pig_years())
+
+
+
+#CITY QUESTION
+# define a basic city class
+class City:
+	name = ""
+	country = ""
+	elevation = 0
+	population = 0
+
+# create a new instance of the City class and
+# define each attribute
+city1 = City()
+city1.name = "Cusco"
+city1.country = "Peru"
+city1.elevation = 3399
+city1.population = 358052
+
+# create a new instance of the City class and
+# define each attribute
+city2 = City()
+city2.name = "Sofia"
+city2.country = "Bulgaria"
+city2.elevation = 2290
+city2.population = 1241675
+# create a new instance of the City class and
+# define each attribute
+city3 = City()
+city3.name = "Seoul"
+city3.country = "South Korea"
+city3.elevation = 38
+city3.population = 9733509
+
+def max_elevation_city(min_population):
+	# Initialize the variable that will hold
+# the information of the city with
+# the highest elevation
+	return_city = City()
+
+
+	# Evaluate the 1st instance to meet the requirements:
+	# does city #1 have at least min_population and
+	# is its elevation the highest evaluated so far?
+	if city1.population >= min_population: #and city1.elevation > return_city.elevation:
+		return_city = city1
+	# Evaluate the 2nd instance to meet the requirements:
+	# does city #2 have at least min_population and
+	# is its elevation the highest evaluated so far?
+	if city2.population >= min_population and city2.elevation > return_city.elevation:
+		return_city = city2
+	# Evaluate the 3rd instance to meet the requirements:
+	# does city #3 have at least min_population and
+	# is its elevation the highest evaluated so far?
+	if city3.population >= min_population and city3.elevation > return_city.elevation:
+		return_city = city3
+ # return return_city
+	#Format the return string
+	if return_city.name:
+		return return_city.name, return_city.country, return_city.elevation
+	else:
+		return ""
+
+print(max_elevation_city(100000)) # Should print "Cusco, Peru"
+print(max_elevation_city(1000000)) # Should print "Sofia, Bulgaria"
+print(max_elevation_city(10000000)) # Should print ""
+
+
+
+
+
+
+
+#Fill in blanks to complete the "multiplication_table" function. Function should
+#print a multiplication table.
+#"multiplication_table(1,3)" should print
+#1 2 3
+#2 4 6
+#3 6 9
+
+def multiplication_table(start, stop):
+    # Complete the outer loop range
+    for x in range(start, stop+1):
+         # Complete the inner loop range
+        for y in range(start, stop+1):
+            # Prints the value of "x" multiplied by "y"
+            # and inserts a space after each value
+            print(str(x*y), end=" ")
+
+        # An empty print() function inserts a line break at the
+        # end of the row
+        print()
+
+
+
+multiplication_table(1, 3)
+
+
+
+
+
+
+import random
+randomlist = []
+for i in range(0,15):
+  n = random.randint(1,30)
+  randomlist.append(n)
+print(randomlist)
+
+odd_number = 0
+even_number = 0
+for x in randomlist:
+  if x % 2 != 0:
+    odd_number += 1
+  else:
+    even_number += 1
+
+print(odd_number, even_number)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Fill in blanks for countdown function. Should begin at the start variable
+#and count down to 0.
+
+def countdown(start):
+    x = start
+    if x > 0:
+        return_string = "Counting down to 0: "
+        while x >= 0: # Complete the while loop
+            return_string += str(x) # Add the numbers to the "return_string"
+            return_string += ","
+            #if x > 0:
+                #return_string += ","
+            x = x-1 # Decrement the appropriate variable
+    else:
+        return_string = "Cannot count down to 0"
+    return return_string
+
+
+print(countdown(10)) # Should be "Counting down to 0: 10,9,8,7,6,5,4,3,2,1,0"
+
+
+
+
+
+
+
+
+
+
+def even_numbers(first, last):
+ # a = [number for number in range(first,last) if number % 2 == 0]
+ # return a
+
+  new_list = [number for number in range(first,last) if number % 2 == 0]
+  return new_list
+
+
+
+
+
+
+
+def setup_guests(guest_list):
+    # loop over the guest list and add each guest to the dictionary with
+    # an initial value of 0
+    result = {}  # Initialize a new dictionary
+    for guest in guest_list: # Iterate over the elements in the list
+         result[guest] = 1 # Add each list element to the dictionary as a key with
+            # the starting value of 0
+    return result
+
+guests = ["Adam","Camila","David","Jamal","Charley","Titus","Raj","Noemi","Sakira","Chidi"]
+
+print(setup_guests(guests))
+
+
+
+
+
+def count_numbers(text):
+  # Initialize a new dictionary.
+  dictionary = {}
+  # Complete the for loop to iterate through each "text" character.
+  for number in text:
+    # Complete the if-statement using a string method to check if the
+    # character is a number.
+    if number.isnumeric():
+      #print(number.isnumeric())
+      # Complete the if-statement using a logical operator to check if
+      # the number is not already in the dictionary.
+      if number not in dictionary:
+          dictionary[number] = 0
+           # Use a dictionary operation to add the number as a key
+           # and set the initial count value to zero.
+      dictionary[number] += 1
+
+      # Use a dictionary operation to increment the number count value
+      # for the existing key.
+     # ___
+  return dictionary
+
+#print(count_numbers("1001000111101"))
+# Should be {'1': 7, '0': 6}
+
+#print(count_numbers("Math is fun! 2+2=4"))
+# Should be {'2': 2, '4': 1}
+
+print(count_numbers("This is a sentence."))
+# Should be {}
+
+print(count_numbers("55 North Center Drive"))
+# Should be {'5': 2}
+
+
+
+
+
+
 "hello")
 
 #for x in range(1):
