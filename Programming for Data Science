@@ -1,0 +1,182 @@
+Write a function called word_frequencies that takes a string and returns a dictionary
+where the keys are words, and the values are the number of times each word appears in the
+string. Ignore case and punctuation.
+
+def word_frequencies(sentence):
+  ''' Function takes a string, and returns a dictionary where keys are words, and the values
+      are the number of times each word appears in the string
+
+      Args:
+      sentence: input string
+
+      Returns:
+      frequencies dictionary '''
+  frequencies = {}
+  lower_sen = sentence.lower().split()
+  for x in lower_sen:
+    if x in frequencies:
+      frequencies[x] += 1
+    else:
+      frequencies[x] = 1
+  return frequencies
+
+word_frequencies("Hello my name is Elif")
+
+
+
+
+You are given a dictionary where the keys are student names and the values are their scores
+on an exam. Write a function called pass_students that takes in this dictionary and
+returns a list of the names of students who scored 60 or above.
+Example Input:
+students_scores = {"Alice": 58, "Bob": 72, "Charlie": 65, "David":
+48, "Eva": 85}
+Expected Output:
+["Bob", "Charlie", "Eva"]
+
+
+
+
+students_scores = {"Alice": 58, "Bob": 72, "Charlie": 65, "David":48, "Eva": 85}
+
+def pass_students(dict):
+  ''' Function takes a dictionary of students  with corresponding test scores, and returns
+      a list of students who scored 60 or above
+
+      Arguments:
+      dict: Dictionary containing names of students as keys, and corresponding test scores as values.
+
+      Returns:
+      List of student names who scored 60 or above'''
+  passing_students = []
+  for student, score in dict.items():
+    if score >= 60:
+      passing_students.append(student)
+  return passing_students
+
+
+pass_students(students_scores)
+
+
+Write a function factorial(n) that computes the factorial of a number n recursively. Add a detailed docstring explaining the purpose, input, and output
+
+def factorial(n):
+    ''' Function computes the factorial of a number, n, recursively, with n == 0 being the base case.
+        The factorial of a number,n, is defined as the product of all positive integers less than or equal to n.
+
+
+  Arguments:
+  n: The non-negative integer whose factorial needs to be calculated
+
+  Returns: The integer value of the factorial of n
+  OR "Error" if n is a value less than 0 '''
+    if n == 0:
+        return 1
+    elif n < 0:
+      return "Error"
+    else:
+        return n * factorial(n - 1)
+
+
+
+
+#Alternative way I tried to solve it because I thought a while loop would work too
+# def factorial(n):
+#   j=1;
+#   fac=1;
+#   if n <= 0:
+#     return "error"
+#   while j <= n:
+#     fac=j*fac
+#     j+=1
+#   return fac
+
+
+factorial(3)
+
+
+
+
+
+Write a function search_list that takes a list of integers and a target value. The function
+should return True if the target is found in the list, and False otherwise. Use a for loop for
+this.
+Example Input:
+lst = [1, 3, 5, 7, 9, 11
+
+
+from re import T
+def search_list(input, target):
+  ''' Search for a target value in a list
+
+  This function takes an input of a list of integers and a set target value and uses a for loop to check if
+  the target value can be found within the list.
+
+  Arguments:
+  Input: The list of integers to search
+  Target value: The integer to be searched for in the list
+
+  Returns: A boolean value. True if the target is in the input, False if the target is not in the input '''
+  for x in input:
+    if x == target:
+      return True
+  return False
+
+lst = [1, 3, 5, 7, 9, 11]
+search_list(lst, 15)
+
+
+
+
+
+You are given a dictionary where the keys are product names and the values are the prices of those products. Write a function total_cost that takes this dictionary and returns the
+total cost of all the products combined. Additionally, print each product and its price while iterating through the dictionary.
+
+
+products = {"apple": 1.5, "banana": 0.75, "orange": 1.25, "mango":
+2.0}
+
+def total_cost(input):
+
+  '''
+      Function takes a dictionary of grocery store items and their prices, and returns the total cost of the items combined.
+      Function also prints price while iterating through input dictionary
+
+      Arguments:
+      Input: Dictionary to be iterated through. Dictionary contains item names as keys, and item prices as values.
+
+      Returns: The total cost of prices of items in the dictionary. Additionally, function also prints each item and corresponding price as it iterates.'''
+
+  total = 0
+  for item,price in input.items():
+    print(item, price)
+    total += price
+  return total
+
+
+
+total_cost(products)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
